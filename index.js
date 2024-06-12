@@ -1,7 +1,19 @@
-function playRound() {
+function playGame() {
 
-    let humanScore = 0
-    let computerScore = 0
+for (i = 0; i < 5; i++) {
+playRound()
+
+}
+
+if (i === 5 && humanScore > computerScore) {console.log("You win the game with " + humanScore + " points!"), humanScore = 0, computerScore = 0;} 
+else if (i === 5 && computerScore > humanScore) {console.log("The computer wins the game with " + computerScore + " points!"), humanScore = 0, computerScore = 0}
+
+}
+
+let humanScore = 0
+let computerScore = 0
+
+function playRound() {
 
     const humanSelection = getHumanChoice()
     const computerSelection = getComputerChoice()
